@@ -1,0 +1,353 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+:root {
+  font-size: 62.6%;
+  font-family: 'Ubuntu', 'Merriweather', 'Fira Sans', 'Work Sans', sans-serif;
+}
+body {
+  position: relative;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+button {
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 8rem;
+}
+
+/* .signup-login-area box */
+.signup-login-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 4rem;
+  min-height: 80vh;
+}
+.signup-login-area-head {
+  font-size: 6rem;
+  font-weight: 900;
+}
+.login-area,
+.signup-area {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+.signup-area {
+  & span {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  & button {
+    background-color: rgb(29, 155, 240);
+    color: #fff;
+    margin-bottom: -10px;
+  }
+  & button:hover {
+    background-color: rgb(26, 140, 216);
+  }
+  & .terms-conditions {
+    font-size: 1.2rem;
+    color: rgb(83, 100, 113);
+    & a {
+      color: rgb(29, 155, 240);
+      text-decoration: none;
+      &:hover {
+        color: rgb(29, 155, 240);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.login-area {
+  & span {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  & button {
+    padding: 1rem 11rem;
+    background-color: #fff;
+    color: rgb(29, 155, 240);
+    border: 1px solid rgba(83, 100, 113, 0.2);
+    &:hover {
+      background-color: rgb(29, 155, 240, 0.1);
+    }
+  }
+}
+
+/*  twiter logo*/
+.twitter-logo {
+  max-width: 100%;
+  min-height: 90vh;
+}
+
+/* nav-footer navigation */
+.nav-footer {
+  grid-area: 2/1 / auto/span 2;
+}
+.nav-footer-list {
+  display: flex;
+  justify-content: center;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  list-style: none;
+  & a,
+  span {
+    font-size: 1.4rem;
+    color: rgb(83, 100, 113);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Log in signin */
+.overflow-box {
+  display: none;
+}
+
+/* signup-area-box  */
+.signup-box,
+.login-box,
+.spinner-box {
+  min-width: 55rem;
+  max-width: 80vw;
+  min-height: fit-content;
+  max-height: 85vh;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  & > .signup-msg,
+  .login-msg {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    display: block;
+  }
+  & .register-btn {
+    display: block;
+    margin: 1rem 0 0 1rem;
+    padding: 0.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.141);
+    }
+  }
+}
+
+.spinner-box {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.5rem;
+  padding: 3rem;
+  & label {
+    width: 60%;
+    position: relative;
+    & .placeholder {
+      position: absolute;
+      top: 50%;
+      left: 4%;
+      transform: translateY(-50%);
+      color: rgb(83, 100, 113);
+      font-size: 1.6rem;
+      transition: all 0.2s ease-in;
+      &:hover {
+        cursor: text;
+      }
+    }
+    & input {
+      outline: 0.5px solid rgba(83, 100, 113, 0.4);
+      font-size: 1.8rem;
+      height: 4rem;
+      width: 100%;
+      border-radius: 5px;
+      padding: 10px 1.2rem 0;
+      /* outline-style: ; */
+      &:hover {
+        background-color: rgba(142, 210, 255, 0.277);
+      }
+      &:focus {
+        outline: 0.5px solid rgb(18, 153, 242);
+        outline: 0.5px solid rgb(0 117 237);
+      }
+    }
+    .input-tips {
+      position: absolute;
+      /* top: 100%; */
+      /* left: 0; */
+    }
+    .show-password {
+      position: absolute;
+      right: -1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 13px;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 100%;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.141);
+      }
+    }
+  }
+  & button {
+    margin-top: 2rem;
+    padding: 1rem 10rem;
+    color: #fff;
+    background-color: rgb(29, 155, 240);
+    &:hover {
+      background-color: rgb(26, 140, 216);
+    }
+  }
+  /* & .login-submit {
+    background-color: rgba(0, 0, 0, 0.866);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.804);
+    }
+  } */
+}
+/* .login.form input[type='password'] {
+  background-color: rgb(214, 214, 214);
+} */
+
+/* hide signup-area-box */
+.show-overflow-box {
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+  z-index: 90;
+}
+.show-register-box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 91;
+}
+
+/* signin-account-box */
+
+/*  Responsive design*/
+@media screen and (max-width: 750px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .nav-footer {
+    grid-area: 3/1 / auto/auto;
+  }
+
+  .twitter-logo {
+    grid-area: 2/1 / auto/auto;
+    min-height: unset;
+    height: 40vw;
+    width: 100%;
+  }
+  .signup-login-area {
+    padding: 4rem 10rem 2rem 10rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .signup-box,
+  .login-box {
+    min-width: 100%;
+  }
+  .twitter-logo {
+    grid-area: 2/1 / auto/auto;
+    min-height: unset;
+    height: 40vw;
+    max-width: 100%;
+  }
+  .signup-login-area {
+    padding: 1rem 3rem 2rem 3rem;
+    & h1 {
+      font-size: 4rem;
+    }
+  }
+  .signup-area span {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .signup-login-area {
+    padding: 1.8rem;
+  }
+  .nav-footer-list {
+    display: flex;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    padding: 1rem;
+  }
+}
+/* ///////////////////////////////// */
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  background: rgb(29, 155, 240);
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
